@@ -1,0 +1,82 @@
+body{
+	margin:0;
+	padding:0;
+        background:url(../images/img24.jpg) no-repeat;
+	font-family: scans-serif;
+	background-size:cover;
+}
+.login-box{
+	width:280px;
+	position: absolute;
+	top:30%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	color:white;
+}
+log-box h1{
+	float:left;
+	font-size:40px;
+	border-bottom: 6px solid #4caf50;
+	margin-bottom: 50px;
+	padding:13px 0;
+}
+.textbox{
+	width:100%;
+	over-flow: hidden;
+	font-size: 20px;
+	padding: 8px 0;
+	margin: 8px 0;
+}
+.textbox i{
+	width: 26px;
+	float:left;
+	rexr-align: center;
+}
+.textbox input{
+	borber: none;
+	outline: none;
+	background: none;
+	color:white;
+	font-size: 15px;
+	width: 200px;
+	
+}
+.btn{
+	width: 40%;
+	backgroung: none;
+	border:4px solid #4caf50;
+	color: black;
+	padding:0.5px;
+	font-size: 18px;
+	cursor: pointer;
+}
+a{
+	width:100%;
+	over-flow: hidden;
+	font-size: 20px;
+	padding: 8px 0;
+	margin: 8px 0;
+}
+a i{
+	width: 26px;
+	float:left;
+	rexr-align: center;
+}
+a input{
+	borber: none;
+	outline: none;
+	background: none;
+	color:white;
+	font-size: 15px;
+	width: 200px;
+	
+}
+.btn{
+	width: 40%;
+	backgroung: none;
+	border:4px solid #4caf50;
+	color: black;
+	padding:0.5px;
+	font-size: 18px;
+	cursor: pointer;
+}

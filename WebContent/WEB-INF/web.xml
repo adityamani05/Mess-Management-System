@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>ClientRegister</display-name>
+  <welcome-file-list>
+    <welcome-file>Register.html</welcome-file>
+  </welcome-file-list>
+  <listener>
+    <listener-class>com.client.listener.ConnectionContext</listener-class>
+  </listener>
+  
+  <context-param>
+    <param-name>driver</param-name>
+    <param-value>com.mysql.cj.jdbc.Driver</param-value>
+  </context-param>
+  <context-param>
+    <param-name>url</param-name>
+    <param-value>jdbc:mysql://localhost:3306/messdata</param-value>
+  </context-param>
+  <context-param>
+    <param-name>username</param-name>
+    <param-value>root</param-value>
+  </context-param>
+  <context-param>
+    <param-name>password</param-name>
+    <param-value>1234</param-value>
+  </context-param>
+  
+  <filter>
+    <filter-name>RegisterObj</filter-name>
+    <filter-class>com.client.filter.LoginBeanFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>RegisterObj</filter-name>
+    <url-pattern>/Register</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <servlet-name>ClientServlet</servlet-name>
+    <servlet-class>com.client.servlet.ClientServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ClientServlet</servlet-name>
+    <url-pattern>/Register</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ClientServletLogin</servlet-name>
+    <servlet-class>com.client.servlet.ClientServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ClientServletLogin</servlet-name>
+    <url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <servlet-name>ownerLogin</servlet-name>
+    <servlet-class>com.owner.servlet.OwnerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ownerLogin</servlet-name>
+    <url-pattern>/ownerlog</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ownerRegister</servlet-name>
+    <servlet-class>com.owner.servlet.OwnerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ownerRegister</servlet-name>
+    <url-pattern>/ownerreg</url-pattern>
+  </servlet-mapping>
+  
+   
+  <servlet>
+    <servlet-name>addMessDetail</servlet-name>
+    <servlet-class>com.owner.servlet.OwnerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>addMessDetail</servlet-name>
+    <url-pattern>/messdetail</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>getMessDetail</servlet-name>
+    <servlet-class>com.owner.servlet.OwnerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>getMessDetail</servlet-name>
+    <url-pattern>/getmessdetail</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>addMessThali</servlet-name>
+  <servlet-class>com.owner.servlet.OwnerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>addMessThali</servlet-name>
+  <url-pattern>/addthali</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>getAllMess</servlet-name>
+    <servlet-class>com.owner.servlet.OwnerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>getAllMess</servlet-name>
+    <url-pattern>/getallmess</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>getAllThali</servlet-name>
+    <servlet-class>com.owner.servlet.OwnerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>getAllThali</servlet-name>
+    <url-pattern>/getallthali</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Logout</servlet-name>
+    <servlet-class>com.client.servlet.ClientServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Logout</servlet-name>
+    <url-pattern>/logout</url-pattern>
+  </servlet-mapping>
+</web-app>
